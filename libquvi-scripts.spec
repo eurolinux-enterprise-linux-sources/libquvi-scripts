@@ -2,7 +2,7 @@
 
 Name:           libquvi-scripts
 Version:        0.4.10
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Embedded lua scripts that libquvi uses for parsing the media details
 
 Group:          Applications/Internet
@@ -34,6 +34,9 @@ make install DESTDIR=$RPM_BUILD_ROOT pkgconfigdir=%{_datadir}/pkgconfig/
 %{_datadir}/pkgconfig/%{name}.pc
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.4.10-3
+- Mass rebuild 2013-12-27
+
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.4.10-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
