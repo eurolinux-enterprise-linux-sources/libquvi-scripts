@@ -1,0 +1,2856 @@
+commit 4d12ffd
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-11-22
+
+    Bump version to 0.4.10
+    
+    Signed-off-by: Toni Gundogdu <legatvs@gmail.com>
+
+m4/version.m4
+
+commit b0e9f1d
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-11-22
+
+    Update NEWS for v0.4.10
+    
+    Signed-off-by: Toni Gundogdu <legatvs@gmail.com>
+
+NEWS
+
+commit e1d1731
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-11-21
+
+    tests: other/spiegel_*.json: Remove
+    
+    Save some bandwidth. If one stream (the default) checks out OK
+    with this site, that's all we need.
+    
+    Signed-off-by: Toni Gundogdu <legatvs@gmail.com>
+
+tests/data/format/other/spiegel_best.json
+tests/data/format/other/spiegel_flv_vp6_388k_135p.json
+tests/data/format/other/spiegel_flv_vp6_576k_315p.json
+tests/data/format/other/spiegel_flv_vp6_64k_135p.json
+tests/data/format/other/spiegel_flv_vp6_928k_544p.json
+tests/data/format/other/spiegel_mp4_h264_1400k_544p.json
+
+commit 5fef6dc
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-11-21
+
+    tests: default/spiegel.json: Use a more recent test URL
+    
+    The previously used test URL defaulted to media stream that is listed
+    in the returned XML data but appears to be missing (HTTP/404). The
+    XML does not seem to indicate the stream availability, either.
+    
+    Signed-off-by: Toni Gundogdu <legatvs@gmail.com>
+
+tests/data/format/default/spiegel.json
+
+commit b182505
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-11-21
+
+    FIX: audioboo.lua: multiple patterns
+    
+    Fix {title,id,thumbnail,stream} patterns. Parse from the
+    contents of the media URL instead of oembed which no longer
+    appears to provide the media stream URL.
+    
+    Signed-off-by: Toni Gundogdu <legatvs@gmail.com>
+
+share/lua/website/audioboo.lua
+
+commit bc35f74
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-11-21
+
+    FIX: dailymotion.lua: title pattern
+    
+    Signed-off-by: Toni Gundogdu <legatvs@gmail.com>
+
+share/lua/website/dailymotion.lua
+
+commit 6357cd1
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-11-21
+
+    FIX: break.lua: multiple patterns
+    
+    Fix {title,id,filepath,filehash} patterns. Add thumbnail_url.
+    
+    Signed-off-by: Toni Gundogdu <legatvs@gmail.com>
+
+share/lua/website/break.lua
+
+commit 3630a39
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-10-01
+
+    Bump version to 0.4.9
+
+m4/version.m4
+
+commit b0effb8
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-10-01
+
+    Update NEWS for 0.4.9
+
+NEWS
+
+commit 63024cb
+Merge: 5a9928a 57722d1
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-10-01
+
+    Merge branch 'tg/next/0.4_fixme_arte' into next
+
+commit 57722d1
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-10-01
+
+    expire.t: Skip all tests
+    
+    Both pluzz.lua and arte.lua need to be fixed now.
+
+tests/t/expire.t
+
+commit e815821
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-10-01
+
+    website/arte.lua: Mark as FIXME
+
+share/Makefile.am
+
+commit 5a9928a
+Merge: 3bdcec9 6a7dada
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-10-01
+
+    Merge branch 'tg/next/0.4_fix_youjizz' into next
+
+commit 6a7dada
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-10-01
+
+    tests: nsfw/youjizz.json: Update for thumbnail_url
+
+tests/data/format/default/nsfw/youjizz.json
+
+commit ebc42da
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-10-01
+
+    FIX: website/youjizz.lua
+    
+    Fix media {ID,media stream URL} parsing. Parse thumbnail URL.
+    
+    Signed-off-by: anon
+
+share/lua/website/youjizz.lua
+
+commit 3bdcec9
+Merge: c623218 e6f6aa2
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-10-01
+
+    Merge branch 'tg/next/0.4_fixme_collegehumor' into next
+
+commit e6f6aa2
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-10-01
+
+    tests: {default,other}/collegehumor*.json: Mark as FIXME
+
+tests/data/format/default/collegehumor.json
+tests/data/format/default/fixme/collegehumor.json
+tests/data/format/other/collegehumor_best.json
+tests/data/format/other/collegehumor_mp4_hq.json
+tests/data/format/other/collegehumor_mp4_sd.json
+tests/data/format/other/fixme/collegehumor_best.json
+tests/data/format/other/fixme/collegehumor_mp4_hq.json
+tests/data/format/other/fixme/collegehumor_mp4_sd.json
+
+commit 4f65343
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-10-01
+
+    collegehumor.lua: Mark as FIXME
+
+share/Makefile.am
+
+commit c623218
+Merge: c681d03 dbd90b8
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    Merge branch 'tg/next/0.4_anon_contrib_nsfw' into next
+
+commit dbd90b8
+Merge: 9696d55 7fb3790
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    Merge branch 'tg/next/0.4_anon_contrib_nsfw__xnxx' into tg/next/0.4_anon_contrib_nsfw
+
+commit 7fb3790
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    Add tests:/nsfw/xnxx.json
+
+tests/data/format/default/nsfw/xnxx.json
+
+commit ac72d16
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    Add website/xnxx.lua (NSFW)
+    
+    Signed-off-by: anon
+
+share/Makefile.am
+share/lua/website/xnxx.lua
+
+commit 9696d55
+Merge: ca7b0e2 1a800a3
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    Merge branch 'tg/next/0.4_anon_contrib_nsfw__jizzhut' into tg/next/0.4_anon_contrib_nsfw
+
+commit 1a800a3
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    Add tests:/nsfw/jizzhut.json
+
+tests/data/format/default/nsfw/jizzhut.json
+
+commit d509b1b
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    Add website/jizzhut.lua (NSFW)
+    
+    Signed-off-by: anon
+
+share/Makefile.am
+share/lua/website/jizzhut.lua
+
+commit ca7b0e2
+Merge: 6dd21a8 dc37f8a
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    Merge branch 'tg/next/0.4_anon_contrib_nsfw__fastjizz' into tg/next/0.4_anon_contrib_nsfw
+
+commit dc37f8a
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    Add tests:/nsfw/fastjizz.json
+
+tests/data/format/default/nsfw/fastjizz.json
+
+commit 9f1ce8b
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    Add website/fastjizz.lua (NSFW)
+    
+    Signed-off-by: anon
+
+share/Makefile.am
+share/lua/website/fastjizz.lua
+
+commit 6dd21a8
+Merge: 871b840 0d8a3ce
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    Merge branch 'tg/next/0.4_anon_contrib_nsfw__deviantclip' into tg/next/0.4_anon_contrib_nsfw
+
+commit 0d8a3ce
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    Add tests:/nsfw/deviantclip.json
+
+tests/data/format/default/nsfw/deviantclip.json
+
+commit 1b12bc4
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    Add website/deviantclip.lua (NSFW)
+    
+    Signed-off-by: anon
+
+share/Makefile.am
+share/lua/website/deviantclip.lua
+
+commit 871b840
+Merge: 9498be7 972fd55
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    Merge branch 'tg/next/0.4_anon_contrib_nsfw__beeg' into tg/next/0.4_anon_contrib_nsfw
+
+commit 972fd55
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    Add tests:/nsfw/beeg.json
+
+tests/data/format/default/nsfw/beeg.json
+
+commit 5d7233f
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    Add website/beeg.lua (NSFW)
+    
+    Signed-off-by: anon
+
+share/Makefile.am
+share/lua/website/beeg.lua
+
+commit 9498be7
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    website/keezmovies.lua: Detect encrypted streams
+    
+    Check for encrypted streams.  Move website/keezmovies.lua
+    from WITH_FIXME to WITH_NSFW.
+    
+    Signed-off-by: anon
+
+share/Makefile.am
+share/lua/website/keezmovies.lua
+
+commit c681d03
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-27
+
+    FIX: Add quvi/html.lua to DIST_lua
+    
+    Distribute libquvi-scripts with the quvi/html.lua file.
+
+share/Makefile.am
+
+commit 5b1c002
+Author: Martin Herkt <lachs0r@hong-mailing.de>
+Date:   2012-09-27
+
+    Fix youtube.lua
+    
+    YouTube has added a new "signature" parameter to their playback URLs.
+    Append this parameter to the URL if url_encoded_fmt_stream_map contains
+    "sig".
+
+share/lua/website/youtube.lua
+
+commit ef333de
+Merge: e657f45 424f9f1
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-03
+
+    Merge branch 'tg/next/0.4_add_tapuz' into next
+
+commit 424f9f1
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-03
+
+    tests: format/default: Add tapuz.json
+
+tests/data/format/default/tapuz.json
+
+commit bc24554
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-09-03
+
+    website/tapuz.lua: Add tapuz flix support
+    
+    ref: http://article.gmane.org/gmane.comp.web.flash.quvi/97
+
+share/Makefile.am
+share/lua/website/tapuz.lua
+
+commit e657f45
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-08-21
+
+    website/xvideos.lua: Improve title parsing (#109)
+    
+    The page <title> could be a truncated version of a longer description
+    or a title. Grab the media title elsewhere.
+    
+    exu: http://www.xvideos.com/video2389960
+    ref: http://sourceforge.net/apps/trac/quvi/ticket/109
+
+share/lua/website/xvideos.lua
+
+commit 94ac387
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-08-19
+
+    Bump version to 0.4.8
+
+m4/version.m4
+
+commit d4fc3d8
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-08-19
+
+    Update news for 0.4.8
+
+NEWS
+
+commit 48ca011
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-08-19
+
+    FIXME: website/bloomberg.lua
+    
+    Mark the script as "FIXME".
+
+share/Makefile.am
+tests/data/format/default/bloomberg.json
+tests/data/format/default/fixme/bloomberg.json
+
+commit bb53ee6
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-08-19
+
+    tests: default/vimeo.json: Update expected results
+
+tests/data/format/default/vimeo.json
+
+commit cc21d68
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-08-19
+
+    tests: default/soundcloud-2.json: Change media URL
+    
+    Replace the media URL that appears to be unavailable.
+
+tests/data/format/default/soundcloud-2.json
+
+commit 186b41e
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-08-19
+
+    FIX: media/gaskrank.lua: Media ID, stream URL patterns
+    
+    Update the media stream URL pattern. Parse media ID from
+    the media stream URL, instead. Croak if media title was
+    not found.
+
+share/lua/website/gaskrank.lua
+
+commit 2ffd344
+Author: Bastien Nocera <hadess@hadess.net>
+Date:   2012-08-16
+
+    souncloud.lua: Never offer placeholder as thumbnail
+
+share/lua/website/soundcloud.lua
+
+commit ee9b7fd
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-08-04
+
+    tests: format/default: Add lego.json
+
+tests/data/format/default/lego.json
+
+commit c38aa05
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-08-04
+
+    Add website/lego.lua (#107)
+    
+    Adds support for city.lego.com .
+    ref: http://sourceforge.net/apps/trac/quvi/ticket/107
+
+share/Makefile.am
+share/lua/website/lego.lua
+
+commit 41e4bd9
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-08-04
+
+    FIX: dailymotion.lua: sequence pattern (#108)
+    
+    Updates the sequence pattern to reflect the recent website changes.
+    ref: http://sourceforge.net/apps/trac/quvi/ticket/108
+
+share/lua/website/dailymotion.lua
+
+commit e4ae322
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-07-28
+
+    FIX: 101greatgoals.lua: article pattern
+    
+    The pattern for the article was broken for:
+      http://is.gd/MuYcm3
+    
+    Converted the original patch to apply.
+    
+    ref: http://article.gmane.org/gmane.comp.web.flash.quvi/89
+
+share/lua/website/101greatgoals.lua
+
+commit e5a0d97
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-28
+
+    totallynsfw.lua: Handle embedded media hosted elsewhere
+    
+    Some of the embedded media is hosted at pornhub. Redirect to different
+    host if detected.
+    
+    * Do not handle the RSS feed URLs
+    
+    Thanks anon.
+
+share/lua/website/totallynsfw.lua
+
+commit 282632e
+Author: Pierre Carrier <pierre@spotify.com>
+Date:   2011-04-14
+
+    Add support for BBC iPlayer (#28)
+    
+    Initial implementation based on get_iplayer, further tested and
+    fixed by Bastien Nocera <hadess@hadess.net>.
+    
+    This version does not support live streams, or radio programmes.
+    
+    Full revision history available at:
+    https://github.com/hadess/libquvi-scripts-iplayer/commits/master
+    
+    https://sourceforge.net/apps/trac/quvi/ticket/28
+
+share/Makefile.am
+share/lua/website/bbc.lua
+
+commit 67ea69d
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-07-18
+
+    Bump version to 0.4.7
+
+m4/version.m4
+
+commit 06606d1
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-07-18
+
+    Update NEWS for v0.4.7
+
+NEWS
+
+commit 78817b8
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-07-18
+
+    FIX: gaskrank.lua: stream URL, ID patterns
+    
+    Update the patterns for media stream URL and ID, reflecting the recent
+    changes made to the website.
+
+share/lua/website/gaskrank.lua
+
+commit 4e89cfb
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-07-17
+
+    tests: format/default: rm tvrain.json
+    
+    Remove tvrain.json altogether. The media URLs expire after a few days,
+    it appears.
+
+tests/data/format/default/tvrain.json
+
+commit d35282e
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-07-17
+
+    tests: format/default: Update youtube*.json files
+    
+    Update YouTube JSONs reflecting the changes made in the commit aec0afa.
+
+tests/data/format/default/youtube.json
+tests/data/format/default/youtube_starttime.json
+
+commit aec0afa
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-07-17
+
+    youtube.lua: Rewrite YouTube.choose_default
+    
+    Replace the old default behaviour:
+      Choose the lowest quality available.
+    With:
+      Either whatever YouTube returns as the first,
+      or whichever is of 480p and found first.
+
+share/lua/website/youtube.lua
+
+commit 7dfe322
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-07-17
+
+    tests: format/default. Update videa.json
+    
+    Change expected content-type and file extension.
+
+tests/data/format/default/videa.json
+
+commit e192ca0
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-07-15
+
+    tests: format/default: Add justintv.json
+
+tests/data/format/default/justintv.json
+
+commit 86baf5d
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-07-15
+
+    Add support for justin.tv and twitch.tv (#99)
+    
+    ref: http://sourceforge.net/apps/trac/quvi/ticket/99
+
+share/Makefile.am
+share/lua/website/justintv.lua
+
+commit 5c5cea7
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-07-13
+
+    tests: format/default/nsfw: Update redtube.json
+    
+    Replace the old test media URL which only returned a 'notfound.swf' file.
+
+tests/data/format/default/nsfw/redtube.json
+
+commit 8c8c0d3
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-07-13
+
+    tests: format/default: Update gaskrank.json
+    
+    Update the title reflecting the changes made to gaskrank.lua in
+    52c6f6d.
+
+tests/data/format/default/gaskrank.json
+
+commit 1aaf74a
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-07-12
+
+    tests: format/default: Update tvrain.json
+    
+    Use updated test data reflecting the script changes made to tvrain.lua
+    in 7bf1682.
+
+tests/data/format/default/tvrain.json
+
+commit 7dfbc1e
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-07-12
+
+    tvrain.lua: Change how media ID is parsed
+    
+    The old solution returned '-1' for media IDs. Parse media ID From the
+    media URL, instead.
+
+share/lua/website/tvrain.lua
+
+commit 7bf1682
+Author: Mikhail Gusarov <dottedmag@dottedmag.net>
+Date:   2012-07-11
+
+    tvrain.lua: Adjust for new URL scheme on the site
+
+share/lua/website/tvrain.lua
+
+commit d7182ac
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-07-10
+
+    FIX: vimeo.lua:115: no match: qualities (#106)
+    
+    ref: http://sourceforge.net/apps/trac/quvi/ticket/106
+
+share/lua/website/vimeo.lua
+
+commit 52c6f6d
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-07-01
+
+    FIX: gaskrank.lua: title pattern
+
+share/lua/website/gaskrank.lua
+
+commit 8eded85
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-06-24
+
+    dailymotion.lua: Make urlback pattern more liberal
+    
+    ref: http://article.gmane.org/gmane.comp.web.flash.quvi/61
+
+share/lua/website/dailymotion.lua
+
+commit 6afe8e9
+Author: Till Maas <opensource@till.name>
+Date:   2012-06-12
+
+    Support spiegel.de with SEO URLs
+    
+    Support SEO URLs on spiegel.de with paths like
+    /video/long-description-video-12345.html
+
+share/lua/website/spiegel.lua
+
+commit f0f8ad4
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-06-10
+
+    Update NEWS for v0.4.6
+
+NEWS
+
+commit e095cdb
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-06-10
+
+    Bump version to 0.4.6
+
+m4/version.m4
+
+commit 2fc90bf
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-06-10
+
+    FIX: ted.lua: Media stream URL pattern
+
+share/lua/website/ted.lua
+
+commit ee0866f
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-06-10
+
+    1tvru.json: Add missing thumbnail_url
+
+tests/data/format/default/1tvru.json
+
+commit 82b78df
+Author: Mort Gerald <mort.gerald@gmail.com>
+Date:   2012-06-07
+
+    pornhub.lua: Media ID can be hexadecimal
+
+share/lua/website/pornhub.lua
+
+commit 6f3e8bd
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-06-04
+
+    FIX: xhamster.lua: server response code 404
+    
+    Fixes "error: server response code 404 (conncode=0)" with some
+    of the videos.
+
+share/lua/website/xhamster.lua
+
+commit e7265b2
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-06-03
+
+    1tvru.lua: Make "pattern" function specific to this script
+
+share/lua/website/1tvru.lua
+
+commit 329a028
+Author: Mikhail Gusarov <dottedmag@dottedmag.net>
+Date:   2012-06-03
+
+    Add tvrain.json
+
+tests/data/format/default/tvrain.json
+
+commit 730720d
+Author: Mikhail Gusarov <dottedmag@dottedmag.net>
+Date:   2012-06-03
+
+    tvrain.lua: Add support for tvrain.ru
+
+share/Makefile.am
+share/lua/website/tvrain.lua
+
+commit c182dc4
+Author: Mikhail Gusarov <dottedmag@dottedmag.net>
+Date:   2012-06-02
+
+    Add 1tvru.json
+
+tests/data/format/default/1tvru.json
+
+commit 82e3151
+Author: Mikhail Gusarov <dottedmag@dottedmag.net>
+Date:   2012-06-02
+
+    1tvru.lua: Add support for 1tv.ru
+
+share/Makefile.am
+share/lua/website/1tvru.lua
+
+commit a42a34a
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-06-02
+
+    website/publicsenat.lua: Change handles path
+
+share/lua/website/publicsenat.lua
+
+commit 3825171
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-06-01
+
+    FIX: website/collegehumor.lua: title pattern
+
+share/lua/website/collegehumor.lua
+
+commit 326bb54
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-06-01
+
+    senat.lua: Use "libquvi-scripts" for project
+
+share/lua/website/senat.lua
+
+commit 0379cda
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-06-01
+
+    publicsenat.json: Add thumbnail_url
+
+tests/data/format/default/publicsenat.json
+
+commit 42c1eac
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-06-01
+
+    Add publicsenat-2.json
+
+tests/data/format/default/publicsenat-2.json
+
+commit f329cde
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-06-01
+
+    publicsenat.lua: Port Raphaël's v0.4.3 changes
+    
+      * Extend support for more recent media URLs
+    
+    Other changes:
+      * Add thumbnail_url
+    
+    Test cases:
+      * http://www.publicsenat.fr/vod/un-monde-de-bulles/speciale-journal-de-spirou/67141
+      * http://www.publicsenat.fr/cms/video-a-la-demande/vod.html?idE=119298
+    
+    ref: http://article.gmane.org/gmane.comp.web.flash.quvi/45
+
+share/lua/website/publicsenat.lua
+
+commit 1e71767
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-06-01
+
+    Add senat.json
+
+tests/data/format/default/senat.json
+
+commit 5cf4540
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-06-01
+
+    senat.lua: Add support for senat.fr
+    
+    ref: http://article.gmane.org/gmane.comp.web.flash.quvi/46
+
+share/Makefile.am
+share/lua/website/senat.lua
+
+commit 437b499
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-30
+
+    Update NEWS for v0.4.5
+
+NEWS
+
+commit 73d7743
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-30
+
+    Bump version to 0.4.5
+
+m4/version.m4
+
+commit 795b89c
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-30
+
+    website/canalplus.lua: Move variable definition
+
+share/lua/website/canalplus.lua
+
+commit 4c85604
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-30
+
+    website/vimeo.lua: Prepend protocol scheme
+
+share/lua/website/vimeo.lua
+
+commit 8b2f943
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-29
+
+    rm canalplus.json
+
+tests/data/format/default/canalplus.json
+
+commit 15a98b6
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-29
+
+    website/canalplus.lua: Check if expired
+    
+    Assuming empty config with the ID set to -1 means "expired".
+
+share/lua/website/canalplus.lua
+
+commit dc1eec7
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-29
+
+    tests: theonion.json: Add thumbnail_url
+
+tests/data/format/default/theonion.json
+
+commit 20c5c04
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-29
+
+    tests: Move ted.json under "ignore:length_bytes
+
+tests/data/format/default/ignore/length_bytes/ted.json
+tests/data/format/default/ted.json
+
+commit d8cfb16
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-29
+
+    website/sapo.lua: Parse thumbnail_url
+
+share/lua/website/sapo.lua
+tests/data/format/default/sapo-2.json
+tests/data/format/default/sapo.json
+
+commit 3cda6d8
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-29
+
+    Add sapo-2.json
+
+tests/data/format/default/sapo-2.json
+
+commit efc2cdf
+Author: Bastien Nocera <hadess@hadess.net>
+Date:   2012-05-27
+
+    Added 101greatgoals.lua
+
+share/Makefile.am
+share/lua/website/101greatgoals.lua
+
+commit 84cb67d
+Author: Bastien Nocera <hadess@hadess.net>
+Date:   2012-05-27
+
+    FIX: sapo.lua: ID, media stream URL and title
+    
+    None of ID, URL or title were getting matched with the current
+    sapo.pt design.
+    
+    Example URL:
+    http://videos.sapo.pt/JZOMcU6KPdZV7RTKIphP
+
+share/lua/website/sapo.lua
+
+commit 6c7ff99
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-28
+
+    tests/data/: Add new vimeo.json
+
+tests/data/format/default/fixme/vimeo.json
+tests/data/format/default/vimeo.json
+tests/data/format/other/fixme/vimeo_best.json
+tests/data/format/other/fixme/vimeo_hd.json
+tests/data/format/other/fixme/vimeo_sd.json
+
+commit a775ddf
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-28
+
+    vimeo.lua: Check for "qualities" property
+
+share/lua/website/vimeo.lua
+
+commit 05852c8
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-28
+
+    share/Makefile.am: Add vimeo.lua
+
+share/Makefile.am
+
+commit a7073f1
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-28
+
+    FIX: vimeo.lua: Title parsing
+    
+    JSON may contain escaped characters, e.g. double-quotation
+    marks (").
+
+share/lua/website/vimeo.lua
+
+commit 694ff91
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-28
+
+    Add website/redtube.lua (and redtube.json)
+    
+    Thanks to the anonymous contributor.
+
+share/Makefile.am
+share/lua/website/redtube.lua
+tests/data/format/default/nsfw/redtube.json
+
+commit 4f811dd
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-28
+
+    FIX: vimeo.lua (#97)
+    
+    Many thanks to the contributor whom wishes to remain anonymous.
+    
+      * https://sourceforge.net/apps/trac/quvi/ticket/97
+
+share/lua/website/vimeo.lua
+
+commit 8fa7311
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-28
+
+    Add theonion_2.json
+
+tests/data/format/default/theonion_2.json
+
+commit 70dfaab
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-28
+
+    FIX: theonion.lua
+
+share/lua/website/theonion.lua
+
+commit 26550e0
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-28
+
+    gen-news.sh: Use --shortstat
+
+gen-news.sh
+
+commit b8daac7
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-27
+
+    canalplus.lua: choose_*: Use array index instead
+
+share/lua/website/canalplus.lua
+
+commit 1f57a3a
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-27
+
+    canalplus.lua: redirect_url: If hosted elsewhere
+
+share/lua/website/canalplus.lua
+
+commit 3651b04
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-27
+
+    canalplus.lua: media ID: Remove if-then-block
+
+share/lua/website/canalplus.lua
+
+commit 7d6758d
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-22
+
+    Move mem.t under WITH_FIXME
+
+tests/Makefile.am
+
+commit 5b9cfc6
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-22
+
+    pluzz.lua, francetelevisions.lua: Mark as FIXME
+
+share/Makefile.am
+tests/t/expire.t
+
+commit 64e0758
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-21
+
+    Add canalplus.json
+
+tests/data/format/default/canalplus.json
+
+commit d146867
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-21
+
+    ted.json: Update length_bytes
+
+tests/data/format/default/ted.json
+
+commit abc096d
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-21
+
+    Add empflix.json
+
+tests/data/format/default/nsfw/empflix.json
+
+commit 888a3ed
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-21
+
+    blip.lua: Mark as FIXME
+    
+      * http://sourceforge.net/apps/trac/quvi/ticket/98
+
+share/Makefile.am
+tests/data/format/default/blip.json
+tests/data/format/default/fixme/blip.json
+tests/data/format/other/blip_best.json
+tests/data/format/other/blip_m4v_blip_sd_360p.json
+tests/data/format/other/blip_mov_source_360p.json
+tests/data/format/other/blip_mp3_web.json
+tests/data/format/other/fixme/blip_best.json
+tests/data/format/other/fixme/blip_m4v_blip_sd_360p.json
+tests/data/format/other/fixme/blip_mov_source_360p.json
+tests/data/format/other/fixme/blip_mp3_web.json
+
+commit b973bed
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-21
+
+    videobash.json: Add thumbnail_url
+
+tests/data/format/default/videobash.json
+
+commit 1867d4f
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-21
+
+    FIX: pornhub.lua: media title, stream URL parsing
+
+share/lua/website/pornhub.lua
+
+commit 4337407
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-21
+
+    keezmovies.lua: Mark as FIXME
+    
+      * Media stream URL is encrypted
+
+share/Makefile.am
+tests/data/format/default/nsfw/fixme/keezmovies.json
+tests/data/format/default/nsfw/keezmovies.json
+
+commit 471e73d
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-21
+
+    FIX: videobash.lua: media URL parsing
+
+share/lua/website/videobash.lua
+
+commit 8f38fe6
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-21
+
+    rm google.lua: video.google.com is no more
+
+share/Makefile.am
+share/lua/website/google.lua
+tests/data/format/default/google.json
+
+commit 3dae8bd
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-21
+
+    rm funnyhub.lua: Videos no more [?]
+
+share/Makefile.am
+share/lua/website/funnyhub.lua
+tests/data/format/default/funnyhub.json
+
+commit 8f20c68
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-05-21
+
+    vimeo.lua: Mark as FIXME
+
+share/Makefile.am
+tests/Makefile.am
+tests/data/format/default/fixme/vimeo.json
+tests/data/format/default/vimeo.json
+tests/data/format/other/fixme/vimeo_best.json
+tests/data/format/other/fixme/vimeo_hd.json
+tests/data/format/other/fixme/vimeo_sd.json
+tests/data/format/other/vimeo_best.json
+tests/data/format/other/vimeo_hd.json
+tests/data/format/other/vimeo_sd.json
+
+commit 0223bd8
+Author: Bastien Nocera <hadess@hadess.net>
+Date:   2012-04-24
+
+    dailymotion: Fix overeager ID fetching
+    
+    On this page:
+    http://dailymotion.com/video/xpdcti
+    the ID contained "?autoplay=1" followed by a number of unrelated lines
+
+share/lua/website/dailymotion.lua
+
+commit 7427026
+Author: PaulK <contact@paulk.fr>
+Date:   2012-03-10
+
+    Makefile changes for canalplus.lua
+
+share/Makefile.am
+
+commit ed6877d
+Author: PaulK <contact@paulk.fr>
+Date:   2012-03-10
+
+    Added canalplus.lua
+
+share/lua/website/canalplus.lua
+
+commit cb2de3c
+Author: PaulK <contact@paulk.fr>
+Date:   2012-04-20
+
+    Added support for empflix.com (NSFW website)
+
+share/Makefile.am
+share/lua/website/empflix.lua
+
+commit d1ac468
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-30
+
+    Lower AC_PREREQ to 2.67
+
+configure.ac
+
+commit 6d9d7d0
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-27
+
+    gen-news.sh: Add stat
+
+gen-news.sh
+
+commit 460c506
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-27
+
+    mem.t: Replace obsolete megavideo URLs
+
+tests/t/mem.t
+
+commit f20e6e4
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-23
+
+    Update NEWS for v0.4.4
+
+NEWS
+
+commit 6f119ee
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-23
+
+    Bump version to 0.4.4
+
+m4/version.m4
+
+commit 325b20e
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-20
+
+    FIX: dailymotion.lua: Issue with some videos (#92)
+    
+    "PANIC: unprotected error in call to Lua API (.../content_type.lua:30:
+    content-type cannot be "text/html; charset=utf-8" for a video. The
+    script for this website is either buggy or incomplete.)"
+    
+      * sourceforge.net/apps/trac/quvi/ticket/92
+
+share/lua/website/dailymotion.lua
+
+commit 04f0284
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-18
+
+    FIX: Lua 5.2: Use the # operator instead (#89)
+    
+    Replace table.getn with the new "length" (#) operator.
+    
+      * http://sourceforge.net/apps/trac/quvi/ticket/89
+
+share/lua/website/quvi/url.lua
+
+commit b5ae4e1
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-18
+
+    FIX: Lua-5.2: Use gmatch instead of gfind (#89)
+    
+     * http://sourceforge.net/apps/trac/quvi/ticket/89
+
+share/lua/website/arte.lua
+share/lua/website/blip.lua
+share/lua/website/cbsnews.lua
+share/lua/website/dailymotion.lua
+share/lua/website/foxnews.lua
+share/lua/website/funnyordie.lua
+share/lua/website/golem.lua
+share/lua/website/guardian.lua
+share/lua/website/imdb.lua
+share/lua/website/mgnetwork.lua
+share/lua/website/quvi/util.lua
+share/lua/website/soundcloud.lua
+share/lua/website/spiegel.lua
+share/lua/website/youtube.lua
+
+commit f2c7ce6
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-18
+
+    Move clipfish.json from NLFY
+
+tests/data/format/default/clipfish.json
+tests/data/format/default/nlfy/clipfish.json
+
+commit 6d64461
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-18
+
+    FIXME: bikeradar.lua
+
+share/Makefile.am
+tests/data/format/default/bikeradar.json
+tests/data/format/default/fixme/bikeradar.json
+
+commit 56855b5
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-18
+
+    Update clipfish.json
+
+tests/data/format/default/nlfy/clipfish.json
+
+commit 457431a
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    content_type.lua: Rewrite using "foo:match"
+
+share/lua/util/content_type.lua
+
+commit 54c167d
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    charset.lua: Use "foo:match" instead
+
+share/lua/util/charset.lua
+
+commit 9c1e994
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    globo.lua: Use "foo:match" instead
+
+share/lua/website/globo.lua
+
+commit 207422f
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    dailymotion.lua: Use "foo:match" instead
+
+share/lua/website/dailymotion.lua
+
+commit a2b9c88
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    google.lua: Use "foo:match" instead
+
+share/lua/website/google.lua
+
+commit ba7bf48
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    foxnews.lua: Use "foo:match" instead
+
+share/lua/website/foxnews.lua
+
+commit 6844f7a
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    bikeradar.lua: Use "foo:match" instead
+
+share/lua/website/bikeradar.lua
+
+commit 5fb6fbb
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    charlierose.lua: Use "foo:match" instead
+
+share/lua/website/charlierose.lua
+
+commit 9e2ae5d
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    youjizz.lua: Use "foo:match" instead
+
+share/lua/website/youjizz.lua
+
+commit 8a8353a
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    xhamster.lua: Use "foo:match" instead
+
+share/lua/website/xhamster.lua
+
+commit a6d4e04
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    cbsnews.lua: Use "foo:match" instead
+
+share/lua/website/cbsnews.lua
+
+commit 98e104c
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    sapo.lua: Use "foo:match" instead
+    
+    Other changes:
+      * Remove obsolete rtmp check
+      * Remove path from U.handles
+
+share/lua/website/sapo.lua
+
+commit 30940c4
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    liveleak.lua: Use "foo:match" instead
+
+share/lua/website/liveleak.lua
+
+commit e2e584e
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    funnyhub.lua: Use "foo:match" instead
+
+share/lua/website/funnyhub.lua
+
+commit 5cbe7fb
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    vimeo.lua: Use "foo:match" instead
+
+share/lua/website/vimeo.lua
+
+commit 24acdcc
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    theonion.lua: Use "foo:match" instead
+
+share/lua/website/theonion.lua
+
+commit b3ca28a
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    collegehumor.lua: Use "foo:match" instead
+
+share/lua/website/collegehumor.lua
+
+commit cda2cdd
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    spankwire.lua: Use "foo:match" instead
+
+share/lua/website/spankwire.lua
+
+commit 05edfb5
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    blip.lua: Use "foo:match" instead
+
+share/lua/website/blip.lua
+
+commit b10fb31
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    francetelevisions.lua: Use "foo:match" instead
+
+share/lua/website/francetelevisions.lua
+
+commit 0052c94
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    videobash.lua: Use "foo:match" instead
+
+share/lua/website/videobash.lua
+
+commit 7a366fd
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    tagtele.lua: Use "foo:match" instead
+
+share/lua/website/tagtele.lua
+
+commit 7a011c7
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    youtube.lua: Use "foo:match" instead
+
+share/lua/website/youtube.lua
+
+commit 57703c2
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    break.lua: Use "foo:match" instead
+
+share/lua/website/break.lua
+
+commit 3b0c9c5
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    xvideos.lua: Use "foo:match" instead
+    
+    Other changes:
+      * Tweak path pattern used with U.handles
+      * Grab media ID from page URL instead
+
+share/lua/website/xvideos.lua
+
+commit bb8bf4c
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    FIX: clipfish.lua: Use new config URL
+    
+    Other changes:
+      * Use "foo:match" instead
+
+share/lua/website/clipfish.lua
+
+commit 2273a88
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    academicearth.lua: Use "foo:match" instead
+
+share/lua/website/academicearth.lua
+
+commit 5b029b0
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    tube8.lua: Use "foo:match" instead
+
+share/lua/website/tube8.lua
+
+commit a5e3b25
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    arte.lua: Use "foo:match" instead
+
+share/lua/website/arte.lua
+
+commit 7882b89
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    tmunderground.lua: Use "foo:match" instead
+
+share/lua/website/tmunderground.lua
+
+commit ca3208c
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    golem.lua: Use "foo:match" instead
+
+share/lua/website/golem.lua
+
+commit 82749fb
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    sevenload.lua: Use "foo:match" instead
+
+share/lua/website/sevenload.lua
+
+commit b584805
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    gaskrank.lua: Use "foo:match" instead
+
+share/lua/website/gaskrank.lua
+
+commit 2c86504
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    keezmovies.lua: Use "foo:match" instead
+
+share/lua/website/keezmovies.lua
+
+commit 510d5ac
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    publicsenat.lua: Use "foo:match" instead
+
+share/lua/website/publicsenat.lua
+
+commit 2bc9f31
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    metacafe.lua: Use "foo:match" instead
+
+share/lua/website/metacafe.lua
+
+commit 01fd8f9
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    totallynsfw.lua: Trim and use "foo:match" instead
+
+share/lua/website/totallynsfw.lua
+
+commit 95c66ea
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    spiegel.lua: Use 'foo:match' instead
+
+share/lua/website/spiegel.lua
+
+commit 0446ad1
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-17
+
+    bloomberg.lua: Trim excess, use foo:match
+
+share/lua/website/bloomberg.lua
+
+commit 386aae2
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-15
+
+    FIX: youtube.lua: Allow embed URLs w/ params (#90)
+    
+     * https://sourceforge.net/apps/trac/quvi/ticket/90
+
+share/lua/website/youtube.lua
+
+commit b972047
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-01
+
+    Update NEWS for v0.4.3
+
+NEWS
+
+commit 3574fcf
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-01
+
+    Remove comment line
+
+share/Makefile.am
+
+commit 85d8cf4
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-01
+
+    Bump version to 0.4.3
+
+m4/version.m4
+
+commit 9d1c7d9
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-03-01
+
+    ted.json: Change expected length_bytes
+
+tests/data/format/default/ted.json
+
+commit e92e2b1
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-29
+
+    Add gen-news.sh (repo only)
+
+gen-news.sh
+
+commit 25ae14c
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-29
+
+    Add license to misc. scripts
+    
+     * find-tests.sh
+     * autogen.sh
+     * gen-ver.sh
+
+autogen.sh
+find-tests.sh
+gen-ver.sh
+
+commit b36e530
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-29
+
+    FIX: imdb.lua:43: attempt to call field 'get_config' (nil)
+
+share/lua/website/imdb.lua
+
+commit de13a39
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-29
+
+    Mark tube8.lua as FIXME
+
+share/Makefile.am
+tests/data/format/default/fixme/tube8.json
+tests/data/format/default/nsfw/tube8.json
+
+commit 4919605
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-29
+
+    FIX: liveleak.lua: attempt to index field 'path' (nil)
+
+share/lua/website/liveleak.lua
+
+commit 628c3e6
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-29
+
+    keezmovies.json: Change expected values
+
+tests/data/format/default/nsfw/keezmovies.json
+
+commit 631ffed
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    Add soundcloud-2.json
+
+tests/data/format/default/soundcloud-2.json
+
+commit 53204fd
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    soundcloud.lua: Rework title parsing
+    
+    Remove character conversion which is an overkill and failed with some
+    of the URLs (e.g. see the 2nd below). Instead, grab the title from og:title.
+    
+    Example URLs:
+     * http://is.gd/CCiZvS
+     * http://is.gd/Tv0huY
+
+share/lua/website/soundcloud.lua
+
+commit 79edb8b
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    youjizz.json: Change expected content-type
+
+tests/data/format/default/nsfw/youjizz.json
+
+commit 75f950e
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    cbsnews.json: Change expected ctype and suffix
+
+tests/data/format/default/cbsnews.json
+tests/data/format/other/cbsnews_m4v_1100k_480p.json
+tests/data/format/other/cbsnews_m4v_386k_216p.json
+tests/data/format/other/cbsnews_m4v_598k_360p.json
+
+commit 2caf52b
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    ted.lua: Support the "default" format only
+    
+     Do not bother with the frequently changed
+     format matrix from hell.
+
+share/lua/website/ted.lua
+tests/data/format/default/ted.json
+tests/data/format/other/ted_best.json
+tests/data/format/other/ted_mp3.json
+tests/data/format/other/ted_mp4.json
+tests/data/format/other/ted_mp4_480p.json
+tests/data/format/other/ted_mp4_light.json
+
+commit d5b292f
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    soundcloud.json: Change expected suffix to mp3
+
+tests/data/format/default/soundcloud.json
+
+commit 8d15211
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    FIX expire.t URL pattern
+
+tests/t/expire.t
+
+commit 69d8872
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    blip_mp3_web.json: Change expected suffix to mp3
+
+tests/data/format/other/blip_mp3_web.json
+
+commit 936fa2c
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    Move globo.json to fixme dir
+
+tests/data/format/default/fixme/globo.json
+tests/data/format/default/globo.json
+
+commit a568afc
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    Remove buzzhumor.lua
+    
+     * Dead website
+
+share/Makefile.am
+share/lua/website/buzzhumor.lua
+tests/data/format/default/buzzhumor.json
+
+commit 7652a19
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    Remove megavideo.json
+
+tests/data/format/default/megavideo.json
+
+commit 7198600
+Author: mutantmonkey <mutantmonkey@mutantmonkey.in>
+Date:   2011-12-22
+
+    Add IMDb support (#88)
+
+share/Makefile.am
+share/lua/website/imdb.lua
+tests/data/format/default/imdb.json
+tests/data/format/other/imdb_480p.json
+tests/data/format/other/imdb_720p.json
+tests/data/format/other/imdb_SD.json
+tests/data/format/other/imdb_best.json
+
+commit 3bd28a4
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    Add pornhub.json
+
+tests/data/format/default/nsfw/pornhub.json
+
+commit b1bd6bf
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    pornhub.lua: Rework title pattern
+
+share/lua/website/pornhub.lua
+
+commit 968143b
+Author: PaulK <contact@paulk.fr>
+Date:   2012-02-08
+
+    Added support for pornhub.com (NSFW)
+
+share/Makefile.am
+share/lua/website/pornhub.lua
+
+commit c9bc609
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    Add tnaflix.json
+
+tests/data/format/default/nsfw/tnaflix.json
+
+commit 74e7c14
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    tnaflix.lua: Rework title pattern
+
+share/lua/website/tnaflix.lua
+
+commit d34caf1
+Author: PaulK <contact@paulk.fr>
+Date:   2012-02-08
+
+    Added support for tnaflix.com (NSFW)
+
+share/Makefile.am
+share/lua/website/tnaflix.lua
+
+commit b60401e
+Author: PaulK <contact@paulk.fr>
+Date:   2012-02-08
+
+    Fixed youjizz
+
+share/lua/website/youjizz.lua
+
+commit 26f48f5
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    Mark globo.lua as FIXME
+
+share/Makefile.am
+
+commit 1315cf0
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    xvideos.json: Change test URL
+
+tests/data/format/default/nsfw/xvideos.json
+
+commit ed5829e
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    audioboo.json: Change expected file_suffix to mp3
+
+tests/data/format/default/audioboo.json
+
+commit 8072eac
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    FIX: videobash.lua: media URL pattern
+    
+      * Fix "error: videobash.lua:54: no match: media url"
+      * Unescape media URL
+
+share/lua/website/videobash.lua
+
+commit 2bd53fd
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-12-13
+
+    FIX xhamster.lua (HTTP/403)
+    
+     * anon contrib
+
+share/lua/website/xhamster.lua
+
+commit dc08e00
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    Remove megavideo.lua
+    
+      * Domain seized
+
+share/Makefile.am
+share/lua/website/megavideo.lua
+
+commit d50efa5
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    Add videa.json
+
+tests/data/format/default/videa.json
+
+commit 8c7e2ff
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    videa.lua: Rework patterns
+
+share/lua/website/videa.lua
+
+commit ab56c38
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2012-02-28
+
+    Add videa.hu support (#84)
+
+share/Makefile.am
+share/lua/website/videa.lua
+
+commit 82d1818
+Author: Bastien Nocera <hadess@hadess.net>
+Date:   2011-12-18
+
+    FIX: soundcloud.lua: Multi-byte char handling
+    
+    The previous code only worked for unicode escaped characters
+    that didn't contain any characters on the range a-f as we matched
+    with %d. Furthermore, we didn't handle values >= 256 when unescaping
+    them. This is now fixed using the helper code from:
+    http://luaparse.luaforge.net/libquery.lua.html
+
+share/lua/website/soundcloud.lua
+
+commit ca784e3
+Author: Bastien Nocera <hadess@hadess.net>
+Date:   2011-12-06
+
+    Add special-case suffix for audio/mpeg
+    
+    It's not mpeg, it's mp3.
+
+share/lua/util/content_type.lua
+
+commit 46737b5
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-12-06
+
+    Update guardian.json
+
+tests/data/format/default/guardian.json
+tests/data/format/default/guardian_audio.json
+
+commit 62c5f6a
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-12-06
+
+    Add tcmag.json, add tcmag to redirect.t
+
+tests/data/format/default/nsfw/tcmag.json
+tests/data/resolve/redirect_url_tcmag.json
+tests/t/redirect.t
+
+commit 3ab02ab
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-12-06
+
+    Add tcmag.lua to Makefile.am
+
+share/Makefile.am
+
+commit f5cbd0d
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-12-06
+
+    tcmag.lua: Make query_formats work with external content
+    
+    Additional changes
+      * Check for liveleak content
+      * Fix self.id pattern
+
+share/lua/website/tcmag.lua
+
+commit 5f8d188
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-12-06
+
+    Add tcmag.lua
+    
+     * anon contrib
+
+share/lua/website/tcmag.lua
+
+commit 019f38e
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-12-06
+
+    guardian.lua: Parse from JSON instead (#83)
+    
+    Additional changes:
+      * Re-implmenent query_formats
+      * Support more formats
+    
+      http://sourceforge.net/apps/trac/quvi/ticket/83
+
+share/lua/website/guardian.lua
+
+commit fdd223a
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-12-06
+
+    liveleak.lua: Support embedded URLs
+
+share/lua/website/liveleak.lua
+
+commit 0f7c3dd
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-12-06
+
+    Update mgnetwork JSONs
+
+tests/data/format/default/mgnetwork.json
+tests/data/format/other/mgnetwork_best.json
+tests/data/format/other/mgnetwork_mp4.json
+tests/data/format/other/mgnetwork_xflv.json
+
+commit b34fef6
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-12-06
+
+    FIX: mgnetwork.lua: return duration in msec
+
+share/lua/website/mgnetwork.lua
+
+commit 067a98f
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-29
+
+    Update NEWS for 0.4.2
+
+NEWS
+
+commit dfe6e81
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-29
+
+    Bump version to 0.4.2
+
+m4/version.m4
+
+commit 5c70a7c
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-29
+
+    Remove foundrymusic.lua
+
+share/Makefile.am
+share/lua/website/foundrymusic.lua
+tests/data/format/default/nsfw/foundrymusic.json
+tests/data/format/default/nsfw/foundrymusic_2.json
+
+commit f6a2c71
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-29
+
+    Use quvi 0.4.1 options with tests, instead
+
+tests/README
+tests/t/expire.t
+tests/t/format_default.t
+tests/t/format_other.t
+tests/t/mem.t
+tests/t/nosupport.t
+tests/t/redirect.t
+tests/t/shortened.t
+
+commit 163d337
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-29
+
+    FIX: dailymotion.lua:130: no match: video plugin params
+    
+      * http://sourceforge.net/apps/trac/quvi/ticket/82
+
+share/lua/website/dailymotion.lua
+
+commit 67bd708
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-28
+
+    FIX: videobash.lua: media URL parsing (#81)
+    
+      * http://sourceforge.net/apps/trac/quvi/ticket/81
+
+share/lua/website/videobash.lua
+
+commit 6e1d2ee
+Author: Tomas Janousek <tomi@nomi.cz>
+Date:   2011-11-28
+
+    Fix tube8.lua url parsing
+
+share/lua/website/tube8.lua
+
+commit 917006a
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-27
+
+    mgnetwork.lua: Add "best" to static formats list
+
+share/lua/website/mgnetwork.lua
+
+commit 5c4f2d6
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-27
+
+    mgnetwork.lua: Apply libquvi-scripts
+
+share/lua/website/mgnetwork.lua
+
+commit 04f4bd6
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-27
+
+    Remove media stream URLs from test jsons
+
+tests/data/format/other/mgnetwork_best.json
+tests/data/format/other/mgnetwork_mp4.json
+
+commit 499b6f5
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-27
+
+    Add mgnetwork test jsons
+
+tests/data/format/default/mgnetwork.json
+tests/data/format/other/mgnetwork_best.json
+tests/data/format/other/mgnetwork_mp4.json
+tests/data/format/other/mgnetwork_xflv.json
+
+commit 545d6e9
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-27
+
+    Add mgnetwork.lua to Makefile.am
+
+share/Makefile.am
+
+commit 96ef335
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-27
+
+    mgnetwork.lua: Add support for multiple formats
+    
+     * Re-implement query_formats, parse
+    
+    Media quality properties unavailable in the config xml. Use naive 'best'
+    and 'default' format determination.
+    
+     * <http://sourceforge.net/apps/trac/quvi/ticket/78>
+
+share/lua/website/mgnetwork.lua
+
+commit eb532c7
+Author: mutantmonkey <mutantmonkey@mutantmonkey.in>
+Date:   2011-11-25
+
+    Add support for Media General properties
+
+share/lua/website/mgnetwork.lua
+
+commit 8a40fa0
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-24
+
+    FIX: Potential "attempt to index ... (a nil value)"
+
+share/lua/website/arte.lua
+share/lua/website/blip.lua
+share/lua/website/cbsnews.lua
+share/lua/website/collegehumor.lua
+share/lua/website/dailymotion.lua
+share/lua/website/foxnews.lua
+share/lua/website/funnyordie.lua
+share/lua/website/golem.lua
+share/lua/website/spiegel.lua
+share/lua/website/ted.lua
+share/lua/website/vimeo.lua
+share/lua/website/youtube.lua
+
+commit 6b25fd8
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-08
+
+    xvideos.json: Change URL
+
+tests/data/format/default/nsfw/xvideos.json
+
+commit 48590da
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-22
+
+    Fix youtube.lua: Check for nil t.host
+    
+    Example: "quvi --support foo"
+      error: /usr/share/libquvi-scripts/lua/website/youtube.lua:77: attempt to
+      index field 'host' (a nil value)
+
+share/lua/website/youtube.lua
+
+commit 6b814ca
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-06
+
+    Update NEWS for 0.4.1
+
+NEWS
+
+commit 1bf12cf
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-06
+
+    Bump version to 0.4.1
+
+m4/version.m4
+
+commit 5246b28
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-06
+
+    redirect.t: Add test for ted external URL
+
+tests/data/resolve/redirect_url_ted.json
+tests/t/redirect.t
+
+commit ac009ac
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-06
+
+    ted.lua: Handle external media
+
+share/lua/website/ted.lua
+
+commit c1f1749
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-06
+
+    ted.lua: Fix media URL check
+
+share/lua/website/ted.lua
+
+commit e19ac08
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-06
+
+    Fix ted.lua thumbnail_url pattern
+
+share/lua/website/ted.lua
+
+commit e72021e
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-04
+
+    tests/README: Add find-tests.sh note
+
+tests/README
+
+commit da0d0b4
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-04
+
+    Add find-tests.sh
+
+Makefile.am
+find-tests.sh
+
+commit fd05cfa
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-04
+
+    Fix plan tests
+    
+      * "You tried to plan twice at ... Looks like your test exited ..."
+
+tests/t/redirect.t
+tests/t/shortened.t
+
+commit ae190c3
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-04
+
+    yfrog.json: Change expected title
+
+tests/data/format/default/yfrog.json
+
+commit 6f56730
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-04
+
+    yfrog.lua: Fix title pattern
+
+share/lua/website/yfrog.lua
+
+commit 9f4601c
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-04
+
+    tube8.json: Change expected content-type
+
+tests/data/format/default/nsfw/tube8.json
+
+commit d9da86e
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-04
+
+    tmunderground.json: Change expected content-type
+
+tests/data/format/default/tmunderground.json
+
+commit 7205ea4
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-04
+
+    ted*.json: Change expected length
+
+tests/data/format/default/ted.json
+tests/data/format/other/ted_best.json
+tests/data/format/other/ted_mp4.json
+tests/data/format/other/ted_mp4_480p.json
+tests/data/format/other/ted_mp4_light.json
+
+commit 37c9626
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-11-04
+
+    funnyordie*.json: Change expected title
+
+tests/data/format/default/funnyordie.json
+tests/data/format/other/funnyordie_best.json
+tests/data/format/other/funnyordie_mp4_ipad.json
+tests/data/format/other/funnyordie_mp4_wifi.json
+
+commit b2e0ed4
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-10-25
+
+    Fix xhamster.lua title parsing
+
+share/lua/website/xhamster.lua
+
+commit 6b5873a
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-10-05
+
+    Update NEWS for 0.4.0
+
+NEWS
+
+commit 0c04e02
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-10-04
+
+    Revert "Mark foundrymusic.lua as fixme"
+    
+    This reverts commit 406430c8d22e788f75e0cd05c34dadf3ce3a13d2.
+
+share/Makefile.am
+tests/data/format/default/fixme/foundrymusic.json
+tests/data/format/default/fixme/foundrymusic_2.json
+tests/data/format/default/nsfw/foundrymusic.json
+tests/data/format/default/nsfw/foundrymusic_2.json
+
+commit a1c146c
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-09-30
+
+    Add expire.t
+    
+     * Remove unused format_default_nonhttp.t
+     * Add header to .t files
+
+tests/Makefile.am
+tests/README
+tests/data/format/default/non-http/README
+tests/lib/Test/Quvi.pm
+tests/t/d/url.t
+tests/t/expire.t
+tests/t/format_default.t
+tests/t/format_default_nonhttp.t
+tests/t/format_other.t
+tests/t/mem.t
+tests/t/nosupport.t
+tests/t/pod.t
+tests/t/redirect.t
+tests/t/shortened.t
+
+commit f787714
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-09-27
+
+    Change handles path pattern in pluzz.lua
+
+share/lua/website/pluzz.lua
+
+commit e84bbd5
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-09-25
+
+    Comment out the 'message' check in dailymotion.lua
+    
+     * http://is.gd/FaRu7w
+
+share/lua/website/dailymotion.lua
+
+commit 406430c
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-09-25
+
+    Mark foundrymusic.lua as fixme
+    
+      * This Page Is Under Construction
+
+share/Makefile.am
+tests/data/format/default/fixme/foundrymusic.json
+tests/data/format/default/fixme/foundrymusic_2.json
+tests/data/format/default/nsfw/foundrymusic.json
+tests/data/format/default/nsfw/foundrymusic_2.json
+
+commit d6d1fc8
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-09-25
+
+    Cleanup test JSONs
+
+tests/data/format/default/nsfw/xvideos.json
+tests/data/format/default/ted.json
+
+commit 072f960
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-09-25
+
+    Fix tvlux.lua
+
+share/Makefile.am
+share/lua/website/tvlux.lua
+tests/data/format/default/fixme/tvlux.json
+tests/data/format/default/tvlux.json
+
+commit 89493ba
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-09-24
+
+    Add more --support tests
+
+tests/t/nosupport.t
+
+commit abadd07
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-09-24
+
+    Revise YouTube.normalize
+
+share/lua/website/youtube.lua
+
+commit f85078a
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-09-24
+
+    Fix attempt to call global parse_path (a nil value)
+
+share/lua/website/quvi/url.lua
+
+commit 1567758
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-09-22
+
+    Use empty string instead of "no"
+
+configure.ac
+
+commit 0d5fe06
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-09-23
+
+    Remove config.aux
+
+autogen.sh
+
+commit 62cc25f
+Author: Toni Gundogdu <legatvs@gmail.com>
+Date:   2011-09-19
+
+    Split from git://repo.or.cz/quvi.git
+
+.gitignore
+AUTHORS
+COPYING
+INSTALL
+Makefile.am
+README
+autogen.sh
+configure.ac
+doc/Makefile.am
+doc/man7/Makefile.am
+doc/man7/libquvi-scripts.7.pod
+gen-ver.sh
+libquvi-scripts.pc.in
+m4/version.m4
+share/Makefile.am
+share/lua/Makefile.am
+share/lua/README
+share/lua/util/charset.lua
+share/lua/util/content_type.lua
+share/lua/util/trim.lua
+share/lua/website/README
+share/lua/website/academicearth.lua
+share/lua/website/arte.lua
+share/lua/website/audioboo.lua
+share/lua/website/bikeradar.lua
+share/lua/website/blip.lua
+share/lua/website/bloomberg.lua
+share/lua/website/break.lua
+share/lua/website/buzzhumor.lua
+share/lua/website/cbsnews.lua
+share/lua/website/charlierose.lua
+share/lua/website/clipfish.lua
+share/lua/website/collegehumor.lua
+share/lua/website/dailymotion.lua
+share/lua/website/foundrymusic.lua
+share/lua/website/foxnews.lua
+share/lua/website/francetelevisions.lua
+share/lua/website/funnyhub.lua
+share/lua/website/funnyordie.lua
+share/lua/website/gaskrank.lua
+share/lua/website/globo.lua
+share/lua/website/golem.lua
+share/lua/website/google.lua
+share/lua/website/guardian.lua
+share/lua/website/keezmovies.lua
+share/lua/website/liveleak.lua
+share/lua/website/megavideo.lua
+share/lua/website/metacafe.lua
+share/lua/website/pluzz.lua
+share/lua/website/publicsenat.lua
+share/lua/website/quvi/bit.lua
+share/lua/website/quvi/const.lua
+share/lua/website/quvi/html.lua
+share/lua/website/quvi/url.lua
+share/lua/website/quvi/util.lua
+share/lua/website/sapo.lua
+share/lua/website/sevenload.lua
+share/lua/website/soundcloud.lua
+share/lua/website/spankwire.lua
+share/lua/website/spiegel.lua
+share/lua/website/tagtele.lua
+share/lua/website/ted.lua
+share/lua/website/theonion.lua
+share/lua/website/tmunderground.lua
+share/lua/website/totallynsfw.lua
+share/lua/website/tube8.lua
+share/lua/website/tvlux.lua
+share/lua/website/videobash.lua
+share/lua/website/vimeo.lua
+share/lua/website/xhamster.lua
+share/lua/website/xvideos.lua
+share/lua/website/yfrog.lua
+share/lua/website/youjizz.lua
+share/lua/website/youtube.lua
+stamp.sh
+tests/Makefile.am
+tests/README
+tests/data/format/default/audioboo.json
+tests/data/format/default/bikeradar.json
+tests/data/format/default/blip.json
+tests/data/format/default/bloomberg.json
+tests/data/format/default/break.json
+tests/data/format/default/buzzhumor.json
+tests/data/format/default/cbsnews.json
+tests/data/format/default/charlierose.json
+tests/data/format/default/collegehumor.json
+tests/data/format/default/fixme/README
+tests/data/format/default/fixme/tvlux.json
+tests/data/format/default/foxnews.json
+tests/data/format/default/funnyhub.json
+tests/data/format/default/funnyordie.json
+tests/data/format/default/gaskrank.json
+tests/data/format/default/globo.json
+tests/data/format/default/golem.json
+tests/data/format/default/google.json
+tests/data/format/default/guardian.json
+tests/data/format/default/guardian_audio.json
+tests/data/format/default/ignore/README
+tests/data/format/default/ignore/length_bytes/dailymotion.json
+tests/data/format/default/liveleak.json
+tests/data/format/default/megavideo.json
+tests/data/format/default/metacafe.json
+tests/data/format/default/nlfy/clipfish.json
+tests/data/format/default/nlfy/sevenload.json
+tests/data/format/default/non-http/README
+tests/data/format/default/nsfw/foundrymusic.json
+tests/data/format/default/nsfw/foundrymusic_2.json
+tests/data/format/default/nsfw/keezmovies.json
+tests/data/format/default/nsfw/spankwire.json
+tests/data/format/default/nsfw/totallynsfw.json
+tests/data/format/default/nsfw/tube8.json
+tests/data/format/default/nsfw/xhamster.json
+tests/data/format/default/nsfw/xvideos.json
+tests/data/format/default/nsfw/youjizz.json
+tests/data/format/default/publicsenat.json
+tests/data/format/default/sapo.json
+tests/data/format/default/soundcloud.json
+tests/data/format/default/spiegel.json
+tests/data/format/default/tagtele.json
+tests/data/format/default/ted.json
+tests/data/format/default/theonion.json
+tests/data/format/default/tmunderground.json
+tests/data/format/default/videobash.json
+tests/data/format/default/vimeo.json
+tests/data/format/default/yfrog.json
+tests/data/format/default/youtube.json
+tests/data/format/default/youtube_starttime.json
+tests/data/format/other/blip_best.json
+tests/data/format/other/blip_m4v_blip_sd_360p.json
+tests/data/format/other/blip_mov_source_360p.json
+tests/data/format/other/blip_mp3_web.json
+tests/data/format/other/cbsnews_best.json
+tests/data/format/other/cbsnews_m4v_1100k_480p.json
+tests/data/format/other/cbsnews_m4v_386k_216p.json
+tests/data/format/other/cbsnews_m4v_598k_360p.json
+tests/data/format/other/cbsnews_mp4_1100k_480p.json
+tests/data/format/other/cbsnews_mp4_500k_240p.json
+tests/data/format/other/collegehumor_best.json
+tests/data/format/other/collegehumor_mp4_hq.json
+tests/data/format/other/collegehumor_mp4_sd.json
+tests/data/format/other/foxnews_best.json
+tests/data/format/other/foxnews_high.json
+tests/data/format/other/foxnews_low.json
+tests/data/format/other/foxnews_med.json
+tests/data/format/other/foxnews_med_low.json
+tests/data/format/other/funnyordie_best.json
+tests/data/format/other/funnyordie_mp4_ipad.json
+tests/data/format/other/funnyordie_mp4_wifi.json
+tests/data/format/other/golem_best.json
+tests/data/format/other/golem_m4v_ipod_360p.json
+tests/data/format/other/golem_mp4_high_540p.json
+tests/data/format/other/golem_mp4_medium_270p.json
+tests/data/format/other/ignore/README
+tests/data/format/other/ignore/length_bytes/dailymotion_best.json
+tests/data/format/other/ignore/length_bytes/dailymotion_mp4_384p.json
+tests/data/format/other/ignore/length_bytes/dailymotion_mp4_480p.json
+tests/data/format/other/ignore/length_bytes/dailymotion_mp4_720p.json
+tests/data/format/other/spiegel_best.json
+tests/data/format/other/spiegel_flv_vp6_388k_135p.json
+tests/data/format/other/spiegel_flv_vp6_576k_315p.json
+tests/data/format/other/spiegel_flv_vp6_64k_135p.json
+tests/data/format/other/spiegel_flv_vp6_928k_544p.json
+tests/data/format/other/spiegel_mp4_h264_1400k_544p.json
+tests/data/format/other/ted_best.json
+tests/data/format/other/ted_mp3.json
+tests/data/format/other/ted_mp4.json
+tests/data/format/other/ted_mp4_480p.json
+tests/data/format/other/ted_mp4_light.json
+tests/data/format/other/vimeo_best.json
+tests/data/format/other/vimeo_hd.json
+tests/data/format/other/vimeo_sd.json
+tests/data/format/other/youtube_best.json
+tests/data/format/other/youtube_fmt05_240p.json
+tests/data/format/other/youtube_fmt18_360p.json
+tests/data/format/other/youtube_fmt22_720p.json
+tests/data/format/other/youtube_fmt34_360p.json
+tests/data/format/other/youtube_fmt35_480p.json
+tests/data/format/other/youtube_fmt37_1080p.json
+tests/data/format/other/youtube_fmt38_1536p.json
+tests/data/resolve/redirect_url_academicearth.json
+tests/data/resolve/redirect_url_dorkly.json
+tests/data/resolve/shortened.json
+tests/lib/Test/Quvi.pm
+tests/t/d/url.t
+tests/t/format_default.t
+tests/t/format_default_nonhttp.t
+tests/t/format_other.t
+tests/t/mem.t
+tests/t/nosupport.t
+tests/t/pod.t
+tests/t/redirect.t
+tests/t/shortened.t
